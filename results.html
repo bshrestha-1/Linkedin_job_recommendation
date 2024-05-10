@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Recommendations</title>
+</head>
+<body>
+    <h1>Recommended Jobs</h1>
+    <ul>
+    {% for job in recommendations.itertuples() %}
+        <li>
+            <h3>{{ job.title }} at {{ job.company_name }}</h3>
+            <p>Description: {{ job.description }}</p>
+            <p>Salary: {{ job.med_salary }}</p>
+            <p>Skills: {{ job.skill_abr }}</p>
+            <p>Work Type: {{ job.work_type }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
+

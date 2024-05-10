@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+            <h1>Find Your Next Job</h1>
+        </header>
+        <section class="form-section">
+            <form action="/recommend" method="POST">
+                <div class="form-group">
+                    <label for="description">Job Description:</label><br>
+                    <textarea name="description" rows="5" cols="40"
+                        placeholder="Describe the job you're interested in..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="salary_min">Minimum Salary:</label><br>
+                    <input type="text" name="salary_min" placeholder="Enter minimum salary">
+                </div>
+
+                <div class="form-group">
+                    <label for="salary_max">Maximum Salary:</label><br>
+                    <input type="text" name="salary_max" placeholder="Enter maximum salary">
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Skills (comma-separated):</label><br>
+                    <input type="text" name="skills" placeholder="e.g., Python, Data Science, SQL">
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Get Recommendations" class="btn">
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
