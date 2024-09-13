@@ -20,7 +20,6 @@ Upon running the script, you will be prompted to provide the following details:
   - Job Description: A brief description of the job you are interested in.
   - Salary Range: The minimum and maximum expected salary.
   - Skills Required: A comma-separated list of important skills for the job.
-  - Work Type: The type of work (e.g., Full-time, Part-time).
 
 The script will then process this information, filter relevant jobs, and generate recommendations. The recommendations will be saved in a file called recommendations.csv.
 
